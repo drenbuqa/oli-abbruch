@@ -7,19 +7,18 @@ import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle, Navigation } from 
 type FieldErrors = { name?: string; email?: string; message?: string };
 
 function MapEmbed() {
-  const [failed, setFailed] = useState(false);
+  const [error, setError] = useState(false);
 
-  if (failed) {
+  if (error) {
     return (
       <div className="rounded-sm border border-gray-700/40 bg-charcoal-light/20 flex-1 min-h-[200px] flex flex-col items-center justify-center gap-3 p-6 text-center">
         <Navigation size={24} className="text-red/60" strokeWidth={1.5} />
-        <p className="text-off-white font-bold text-sm">Beethovenstr. 19</p>
-        <p className="text-gray-400 text-sm">73642 Welzheim, Deutschland</p>
+        <p className="text-off-white font-bold text-sm">Beethovenstr. 19, 73642 Welzheim</p>
         <a
           href="https://maps.google.com/?q=Beethovenstr.+19,+73642+Welzheim"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-1 text-xs text-red hover:underline font-bold uppercase tracking-wider"
+          className="text-xs text-red hover:underline font-bold uppercase tracking-wider"
         >
           In Google Maps öffnen →
         </a>
@@ -30,7 +29,7 @@ function MapEmbed() {
   return (
     <div className="rounded-sm overflow-hidden border border-gray-700/40 flex-1 min-h-[200px]">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.0!2d9.6318!3d48.8764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799ba0d75d5b0c9%3A0xbf62d83e3e5f5d6!2sBeethoven%C3%9F.%2019%2C%2073642%20Welzheim!5e0!3m2!1sde!2sde!4v1234567890"
+        src="https://maps.google.com/maps?q=Beethovenstra%C3%9Fe+19%2C+73642+Welzheim&output=embed&hl=de"
         width="100%"
         height="100%"
         style={{ border: 0, minHeight: "200px" }}
@@ -38,7 +37,7 @@ function MapEmbed() {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         title="Oli Abbruch & Entkernung Standort"
-        onError={() => setFailed(true)}
+        onError={() => setError(true)}
       />
     </div>
   );

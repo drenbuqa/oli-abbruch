@@ -6,9 +6,12 @@ import { ImageOff } from "lucide-react";
 
 type Props = Omit<ImageProps, "onLoad" | "onError"> & {
   skeletonClassName?: string;
+  // Set true when a parent Framer Motion element already handles the reveal —
+  // skips the internal skeleton/fade so the two don't conflict.
+  plain?: boolean;
 };
 
-export default function ImageWithFallback({ skeletonClassName, className, alt, ...props }: Props) {
+export default function ImageWithFallback({ skeletonClassName, className, alt, plain, ...props }: Props) {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
 
@@ -21,9 +24,19 @@ export default function ImageWithFallback({ skeletonClassName, className, alt, .
     );
   }
 
+  if (plain) {
+    return (
+      <Image
+        {...props}
+        alt={alt}
+        className={className}
+        onError={() => setError(true)}
+      />
+    );
+  }
+
   return (
     <>
-      {/* Pulse skeleton shown until image loads */}
       {!loaded && (
         <div className={`absolute inset-0 animate-pulse bg-gradient-to-br from-gray-700/40 to-gray-800/40 ${skeletonClassName ?? ""}`} />
       )}
