@@ -2,30 +2,10 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import {
-  RiBuildingLine,
-  RiHome3Line,
-  RiAlertLine,
-  RiHomeLine,
-  RiHammerLine,
-  RiTruckLine,
-  RiScissorsCutLine,
-  RiToolsLine,
-} from "react-icons/ri";
 import { ArrowRight, ShieldCheck, Clock, Leaf, Phone } from "lucide-react";
 import Link from "next/link";
 import ImageWithFallback from "@/components/ImageWithFallback";
-
-const services = [
-  { slug: "abbruch",              tag: "ABBRUCH",    icon: RiBuildingLine,   title: "Abbruch",               desc: "Kompletter Rückbau von Gebäuden aller Art – effizient, sicher und termingerecht.",          image: "/images/abbruch/PHOTO-2026-07-13-23-02-02-3.jpg" },
-  { slug: "entkernung",           tag: "ENTKERNUNG", icon: RiHome3Line,      title: "Entkernung",             desc: "Innenräume fachgerecht entkernen und für die nächste Phase vorbereiten.",                   image: "/images/abbruch/PHOTO-2026-07-13-23-02-02.jpg" },
-  { slug: "schadstoffentkernung", tag: "SCHADSTOFFE",icon: RiAlertLine,      title: "Schadstoffentfernung",   desc: "Asbest, PCB & Schadstoffe sicher entfernen und gesetzeskonform entsorgen.",                 image: "/images/asbest/PHOTO-2026-07-13-22-38-16.jpg" },
-  { slug: "altbausanierung",      tag: "SANIERUNG",  icon: RiHomeLine,       title: "Altbausanierung",        desc: "Modernisierung und Sanierung alter Gebäudesubstanz mit Präzision.",                         image: "/images/abbruch/PHOTO-2026-07-13-23-02-02-2.jpg" },
-  { slug: "betonbohren",          tag: "BETON",      icon: RiHammerLine,     title: "Beton bohren & sägen",   desc: "Präzise Kernbohrungen und Diamantsägeschnitte in Beton.",                                   image: "/images/abbruch/PHOTO-2026-07-13-23-02-01.jpg" },
-  { slug: "baustellenraeumung",   tag: "RÄUMUNG",    icon: RiTruckLine,      title: "Baustellenräumung",      desc: "Schnelle Räumung, Abtransport und fachgerechte Entsorgung.",                               image: "/images/abbruch/PHOTO-2026-07-13-23-02-02-4.jpg" },
-  { slug: "demontage",            tag: "DEMONTAGE",  icon: RiScissorsCutLine,title: "Demontage",              desc: "Gebäude & Innenräume systematisch zurückbauen – sauber & kontrolliert.",                   image: "/images/stahltraeger/PHOTO-2026-07-13-22-29-36-2.jpg" },
-  { slug: "stahltraeger",         tag: "STAHLTRÄGER",icon: RiToolsLine,      title: "Stahlträgerarbeiten",    desc: "HEA, HEB, IPE – Lieferung & Einbau durch Profis.",                                         image: "/images/stahltraeger/PHOTO-2026-07-13-22-29-36-3.jpg" },
-];
+import { services } from "@/lib/services";
 
 const badges = [
   { icon: ShieldCheck, title: "Sicher & zertifiziert", desc: "Höchste Sicherheitsstandards" },
@@ -91,7 +71,7 @@ export default function Leistungen() {
                 >
                   <div className="relative h-44 overflow-hidden bg-charcoal shrink-0">
                     <ImageWithFallback
-                      src={service.image}
+                      src={service.heroImage}
                       alt={service.title}
                       fill
                       plain
