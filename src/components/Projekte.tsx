@@ -104,22 +104,6 @@ export default function Projekte() {
           ))}
         </motion.div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-8 flex justify-center"
-        >
-          <Link
-            href="/galerie"
-            className="group flex items-center gap-2 bg-red hover:bg-red-dark text-off-white font-bold text-sm px-7 py-3.5 rounded-sm transition-all duration-300"
-          >
-            Alle {galleryImages.length} Fotos ansehen
-            <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
-          </Link>
-        </motion.div>
 
       </div>
 
