@@ -31,10 +31,10 @@ export default function Footer() {
               <div className="w-1.5 h-1.5 rounded-full bg-red mx-1 mt-0.5" />
               <span className="text-2xl font-black tracking-tight text-red">ABBRUCH</span>
             </div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4">
               Schnell — Sauber — Zuverlässig
             </p>
-            <p className="text-sm text-gray-500 leading-relaxed mb-6">
+            <p className="text-sm text-gray-400 leading-relaxed mb-6">
               Ihr zuverlässiger Partner für professionelle Abbruch- und
               Entkerungsarbeiten in Baden-Württemberg und bundesweit.
             </p>
@@ -65,7 +65,7 @@ export default function Footer() {
                 <li key={link.id}>
                   <button
                     onClick={() => scrollTo(link.id)}
-                    className="group flex items-center gap-1.5 text-sm text-gray-500 hover:text-red transition-colors"
+                    className="group flex items-center gap-1.5 text-sm text-gray-400 hover:text-red transition-colors"
                   >
                     <ChevronRight
                       size={12}
@@ -85,7 +85,7 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-2.5">
               {services.map((s) => (
-                <li key={s} className="flex items-center gap-1.5 text-sm text-gray-500">
+                <li key={s} className="flex items-center gap-1.5 text-sm text-gray-400">
                   <div className="w-1 h-1 rounded-full bg-red/50 shrink-0" />
                   {s}
                 </li>
@@ -102,7 +102,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+4915901425683"
-                  className="group flex items-start gap-3 text-sm text-gray-500 hover:text-red transition-colors"
+                  className="group flex items-start gap-3 text-sm text-gray-400 hover:text-red transition-colors"
                 >
                   <Phone size={15} className="mt-0.5 shrink-0 text-red/60 group-hover:text-red" />
                   +49 1590 1425683
@@ -111,7 +111,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@oliabbruch.de"
-                  className="group flex items-start gap-3 text-sm text-gray-500 hover:text-red transition-colors"
+                  className="group flex items-start gap-3 text-sm text-gray-400 hover:text-red transition-colors"
                 >
                   <Mail size={15} className="mt-0.5 shrink-0 text-red/60 group-hover:text-red" />
                   info@oliabbruch.de
@@ -122,7 +122,7 @@ export default function Footer() {
                   href="https://maps.google.com/?q=Beethovenstr.+19,+73642+Welzheim"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-start gap-3 text-sm text-gray-500 hover:text-red transition-colors"
+                  className="group flex items-start gap-3 text-sm text-gray-400 hover:text-red transition-colors"
                 >
                   <MapPin size={15} className="mt-0.5 shrink-0 text-red/60 group-hover:text-red" />
                   <span>
@@ -139,10 +139,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-gray-800/60">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-gray-400">
             © {new Date().getFullYear()} Oli Abbruch & Entkernung. Alle Rechte vorbehalten.
           </p>
-          <div className="flex items-center gap-4 text-xs text-gray-600">
+          <div className="flex items-center gap-4 text-xs text-gray-400">
             <Link href="/impressum" className="hover:text-red transition-colors">Impressum</Link>
             <span className="text-gray-800">·</span>
             <Link href="/datenschutz" className="hover:text-red transition-colors">Datenschutz</Link>

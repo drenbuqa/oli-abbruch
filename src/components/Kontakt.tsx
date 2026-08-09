@@ -153,7 +153,7 @@ export default function Kontakt() {
                     <Icon size={18} className="text-red" strokeWidth={1.8} />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{item.label}</p>
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">{item.label}</p>
                     <p className="text-off-white font-medium text-sm whitespace-pre-line">{item.value}</p>
                   </div>
                 </a>
@@ -293,7 +293,7 @@ export default function Kontakt() {
                   )}
                 </button>
 
-                <p className="text-xs text-gray-600 text-center">
+                <p className="text-xs text-gray-400 text-center">
                   <span className="text-red">*</span> Pflichtfelder. Ihre Daten werden gemäß unserer{" "}
                   <a href="/datenschutz" className="underline hover:text-gray-400 transition-colors">
                     Datenschutzerklärung
