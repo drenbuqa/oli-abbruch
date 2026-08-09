@@ -136,7 +136,7 @@ export default function Kontakt() {
             className="lg:col-span-2 flex flex-col gap-5"
           >
             {[
-              { icon: Phone, label: "Telefon", value: "0159 01425683", href: "tel:015901425683" },
+              { icon: Phone, label: "Telefon", value: "+49 1590 1425683", href: "tel:+4915901425683" },
               { icon: Mail, label: "E-Mail", value: "info@oliabbruch.de", href: "mailto:info@oliabbruch.de" },
               { icon: MapPin, label: "Adresse", value: "Beethovenstr. 19\n73642 Welzheim", href: "https://maps.google.com/?q=Beethovenstr.+19,+73642+Welzheim" },
             ].map((item) => {
@@ -270,7 +270,7 @@ export default function Kontakt() {
                     <AlertCircle size={16} className="text-red shrink-0 mt-0.5" />
                     <p className="text-sm text-red-200">
                       Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an:{" "}
-                      <a href="tel:015901425683" className="font-bold underline">0159 01425683</a>
+                      <a href="tel:+4915901425683" className="font-bold underline">+49 1590 1425683</a>
                     </p>
                   </div>
                 )}

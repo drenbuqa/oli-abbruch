@@ -92,7 +92,7 @@ export default function Leistungen() {
                     <h3 className="font-black text-charcoal text-[15px] leading-tight mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-xs text-gray-mid leading-relaxed flex-1">
+                    <p className="text-xs text-gray-mid leading-relaxed flex-1 line-clamp-2">
                       {service.desc}
                     </p>
                     <div className="flex items-center gap-1.5 text-red text-xs font-bold mt-4 group-hover:gap-2.5 transition-all duration-200">
@@ -132,12 +132,12 @@ export default function Leistungen() {
               <ArrowRight size={15} />
             </button>
             <a
-              href="tel:+4971822062990"
+              href="tel:+4915901425683"
               className="flex items-center gap-3 text-charcoal hover:text-red transition-colors duration-200"
             >
               <Phone size={18} strokeWidth={1.5} />
               <div>
-                <p className="font-bold text-sm">+49 7182 2062990</p>
+                <p className="font-bold text-sm">+49 1590 1425683</p>
                 <p className="text-[10px] text-gray-mid">Jetzt anrufen</p>
               </div>
             </a>

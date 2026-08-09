@@ -40,7 +40,7 @@ export default function DatenschutzPage() {
               Oli Abbruch & Entkernung<br />
               Beethovenstr. 19<br />
               73642 Welzheim<br /><br />
-              Telefon: <a href="tel:015901425683" className="text-red hover:underline">0159 01425683</a><br />
+              Telefon: <a href="tel:+4915901425683" className="text-red hover:underline">+49 1590 1425683</a><br />
               E-Mail: <a href="mailto:info@oliabbruch.de" className="text-red hover:underline">info@oliabbruch.de</a>
             </p>
           </section>

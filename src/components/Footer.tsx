@@ -39,7 +39,7 @@ export default function Footer() {
               Entkerungsarbeiten in Baden-Württemberg und bundesweit.
             </p>
             <a
-              href="tel:015901425683"
+              href="tel:+4915901425683"
               className="inline-flex items-center gap-2 bg-red hover:bg-red-dark text-off-white text-sm font-bold px-5 py-2.5 rounded-sm transition-colors"
             >
               <Phone size={14} />
@@ -101,11 +101,11 @@ export default function Footer() {
             <ul className="flex flex-col gap-4">
               <li>
                 <a
-                  href="tel:015901425683"
+                  href="tel:+4915901425683"
                   className="group flex items-start gap-3 text-sm text-gray-500 hover:text-red transition-colors"
                 >
                   <Phone size={15} className="mt-0.5 shrink-0 text-red/60 group-hover:text-red" />
-                  0159 01425683
+                  +49 1590 1425683
                 </a>
               </li>
               <li>

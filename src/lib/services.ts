@@ -163,8 +163,9 @@ export const services: Service[] = [
       "Verwertung & Weiterverkauf demontierbarer Materialien",
       "Abstimmung mit Statiker & Bauleitung",
     ],
-    heroImage: "/images/stahltraeger/PHOTO-2026-07-13-22-29-36-2.jpg",
+    heroImage: "https://res.cloudinary.com/drljgepgy/image/upload/v1786312347/0fe2350a-7ea9-4ad7-ac50-0534ba642de3_mzwwjr.jpg",
     galleryImages: [
+      "https://res.cloudinary.com/drljgepgy/image/upload/v1786312347/0fe2350a-7ea9-4ad7-ac50-0534ba642de3_mzwwjr.jpg",
       "/images/stahltraeger/PHOTO-2026-07-13-22-29-36-2.jpg",
       "/images/stahltraeger/PHOTO-2026-07-13-22-29-36.jpg",
       "/images/stahltraeger/PHOTO-2026-07-13-22-29-36-4.jpg",

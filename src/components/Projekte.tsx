@@ -116,7 +116,7 @@ export default function Projekte() {
 
         {/* Skeleton grid — shown before section is in view */}
         {!inView && (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "10px" }}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-[10px]">
             {Array.from({ length: 8 }).map((_, i) => (
               <div
                 key={i}
@@ -158,7 +158,7 @@ export default function Projekte() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "10px" }}
+                className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-[10px]"
               >
                 {filtered.map((img, i) => (
                   <motion.div

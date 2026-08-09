@@ -59,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05 }}
-            className="inline-flex items-center gap-2 border border-red/40 bg-red/10 backdrop-blur-sm px-4 py-1.5 rounded-sm mb-8"
+            className="hidden sm:inline-flex items-center gap-2 border border-red/40 bg-red/10 backdrop-blur-sm px-4 py-1.5 rounded-sm mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-red animate-pulse" />
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-200">
@@ -72,7 +72,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.95] tracking-tight text-off-white mb-6"
+            className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.95] tracking-tight text-off-white mb-4 sm:mb-6"
           >
             <span className="block">ABBRUCH</span>
             <span className="block text-red">&amp; ENTKERNUNG</span>
@@ -85,7 +85,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-xl sm:text-2xl font-light text-gray-300 mb-4 tracking-[0.08em] uppercase"
+            className="text-base sm:text-2xl font-light text-gray-300 mb-3 sm:mb-4 tracking-[0.08em] uppercase"
           >
             Schnell — Sauber — Zuverlässig
           </motion.p>
@@ -94,7 +94,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-base text-gray-400 mb-10 max-w-xl leading-relaxed"
+            className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-10 max-w-xl leading-relaxed"
           >
             Ihr Spezialist für Abbruch, Entkernung und Sanierung in
             Baden-Württemberg. Vertrauen Sie auf Erfahrung, Präzision und
@@ -106,18 +106,18 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            className="flex flex-wrap gap-4"
+            className="flex gap-3 sm:gap-4"
           >
             <button
               onClick={() => scrollTo("#kontakt")}
-              className="group flex items-center gap-2 bg-red hover:bg-red-dark text-off-white font-bold px-8 py-4 rounded-sm transition-all duration-300 hover:shadow-2xl hover:shadow-red/30 hover:gap-3"
+              className="group flex items-center gap-1.5 sm:gap-2 bg-red hover:bg-red-dark text-off-white font-bold text-sm sm:text-base px-5 sm:px-8 py-3 sm:py-4 rounded-sm transition-all duration-300 hover:shadow-2xl hover:shadow-red/30 hover:gap-2.5 sm:hover:gap-3"
             >
               Kontakt aufnehmen
               <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
             </button>
             <button
               onClick={() => scrollTo("#leistungen")}
-              className="flex items-center gap-2 border-2 border-off-white/30 hover:border-off-white text-off-white font-bold px-8 py-4 rounded-sm transition-all duration-300 hover:bg-off-white/5"
+              className="flex items-center gap-2 border-2 border-off-white/30 hover:border-off-white text-off-white font-bold text-sm sm:text-base px-5 sm:px-8 py-3 sm:py-4 rounded-sm transition-all duration-300 hover:bg-off-white/5"
             >
               Unsere Leistungen
             </button>
