@@ -60,13 +60,6 @@ export default function Projekte() {
               Einblicke in unsere abgeschlossenen Projekte — von Abbruch und Entkernung über Stahlträgerarbeiten bis zur Asbestsanierung.
             </p>
           </div>
-          <Link
-            href="/galerie"
-            className="group shrink-0 flex items-center gap-2 border-2 border-charcoal/20 hover:border-red text-charcoal hover:text-red font-bold text-sm px-5 py-3 rounded-sm transition-all duration-200"
-          >
-            Alle Projekte ansehen
-            <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
-          </Link>
         </motion.div>
 
         {/* Preview grid */}
@@ -104,6 +97,22 @@ export default function Projekte() {
           ))}
         </motion.div>
 
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-8 flex justify-center"
+        >
+          <Link
+            href="/galerie"
+            className="group shrink-0 flex items-center gap-2 border-2 border-charcoal/20 hover:border-red text-charcoal hover:text-red font-bold text-sm px-5 py-3 rounded-sm transition-all duration-200"
+          >
+            Alle Projekte ansehen
+            <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+          </Link>
+        </motion.div>
 
       </div>
 
