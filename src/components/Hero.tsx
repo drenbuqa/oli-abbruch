@@ -59,10 +59,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05 }}
-            className="hidden sm:inline-flex items-center gap-2 border border-red/40 bg-red/10 backdrop-blur-sm px-4 py-1.5 rounded-sm mb-8"
+            className="inline-flex items-center gap-2 border border-red/40 bg-red/10 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-1.5 rounded-sm mb-6 sm:mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-red animate-pulse" />
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-200">
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-gray-200">
               Professionelle Abbrucharbeiten
             </span>
           </motion.div>
