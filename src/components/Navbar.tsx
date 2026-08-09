@@ -62,16 +62,16 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-[72px]">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-1.5 shrink-0">
-              <span className="text-off-white font-black text-lg tracking-tight">OLI</span>
-              <span className="text-red font-black text-lg">•</span>
-              <span className="text-off-white font-black text-lg tracking-tight">ABBRUCH</span>
+              <span className="text-off-white font-black text-xl tracking-tight">OLI</span>
+              <span className="text-red font-black text-xl">•</span>
+              <span className="text-off-white font-black text-xl tracking-tight">ABBRUCH</span>
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-2">
               {navLinks.map((link) =>
                 link.hasDropdown ? (
                   <div
@@ -82,7 +82,7 @@ export default function Navbar() {
                     onMouseLeave={() => setDropdownOpen(false)}
                   >
                     <button
-                      className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors duration-200 relative ${
+                      className={`flex items-center gap-1 px-4 py-2.5 text-base font-medium transition-colors duration-200 relative ${
                         isActive(link.href) ? "text-red" : "text-gray-300 hover:text-off-white"
                       }`}
                     >
@@ -155,7 +155,7 @@ export default function Navbar() {
                   <button
                     key={link.label}
                     onClick={() => scrollTo(link.href)}
-                    className="relative px-3 py-2 text-sm font-medium text-gray-300 hover:text-off-white transition-colors duration-200"
+                    className="relative px-4 py-2.5 text-base font-medium text-gray-300 hover:text-off-white transition-colors duration-200"
                   >
                     {link.label}
                   </button>
@@ -167,7 +167,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <a
                 href="tel:+4971822062990"
-                className="flex items-center gap-2 bg-red hover:bg-red-dark text-off-white font-bold text-sm px-4 py-2 rounded-sm transition-all duration-300"
+                className="flex items-center gap-2 bg-red hover:bg-red-dark text-off-white font-bold text-base px-5 py-2.5 rounded-sm transition-all duration-300"
               >
                 <Phone size={14} />
                 Anruf
