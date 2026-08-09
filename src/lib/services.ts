@@ -142,8 +142,9 @@ export const services: Service[] = [
       "Recycling & Wiederverwertung wo möglich",
       "Kurzfristig & auch am Wochenende verfügbar",
     ],
-    heroImage: "/images/abbruch/PHOTO-2026-07-13-23-02-02-4.jpg",
+    heroImage: "https://res.cloudinary.com/drljgepgy/image/upload/v1786312743/IMG_0349_inru6e.jpg",
     galleryImages: [
+      "https://res.cloudinary.com/drljgepgy/image/upload/v1786312743/IMG_0349_inru6e.jpg",
       "/images/abbruch/PHOTO-2026-07-13-23-02-02-4.jpg",
       "/images/abbruch/PHOTO-2026-07-13-23-02-02-3.jpg",
     ],
