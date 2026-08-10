@@ -4,8 +4,9 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, X, Menu, ChevronDown, ArrowRight } from "lucide-react";
+import { Phone, X, Menu, ChevronDown, ArrowRight, MessageSquare } from "lucide-react";
 import { services } from "@/lib/services";
+import ContactModal from "@/components/ContactModal";
 
 const navLinks = [
   { href: "/#leistungen", label: "Leistungen", hasDropdown: true },
@@ -14,7 +15,6 @@ const navLinks = [
   { href: "/#asbest", label: "Asbestsanierung" },
   { href: "/#projekte", label: "Projekte" },
   { href: "/#referenzen", label: "Referenzen" },
-  { href: "/#kontakt", label: "Kontakt" },
 ];
 
 export default function Navbar() {
@@ -22,6 +22,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -165,13 +166,13 @@ export default function Navbar() {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3">
-              <a
-                href="tel:+4915901425683"
+              <button
+                onClick={() => setContactOpen(true)}
                 className="flex items-center gap-2 bg-red hover:bg-red-dark text-off-white font-bold text-base px-5 py-2.5 rounded-sm transition-all duration-300"
               >
-                <Phone size={14} />
-                Anruf
-              </a>
+                <MessageSquare size={14} />
+                Kontakt
+              </button>
             </div>
 
             {/* Mobile hamburger */}
@@ -286,19 +287,28 @@ export default function Navbar() {
               </div>
 
               {/* CTA */}
-              <div className="p-6 border-t border-gray-700/40">
-                <a
-                  href="tel:+4915901425683"
+              <div className="p-6 border-t border-gray-700/40 flex flex-col gap-3">
+                <button
+                  onClick={() => { setMobileOpen(false); setTimeout(() => setContactOpen(true), 350); }}
                   className="flex items-center justify-center gap-2 w-full bg-red hover:bg-red-dark text-off-white font-bold py-4 rounded-sm transition-all"
                 >
-                  <Phone size={16} />
-                  Jetzt anrufen
+                  <MessageSquare size={16} />
+                  Kontakt aufnehmen
+                </button>
+                <a
+                  href="tel:+4915901425683"
+                  className="flex items-center justify-center gap-2 w-full border border-gray-700/50 hover:border-red text-gray-300 hover:text-off-white font-bold py-3 rounded-sm transition-all text-sm"
+                >
+                  <Phone size={14} />
+                  +49 1590 1425683
                 </a>
               </div>
             </motion.div>
           </>
         )}
       </AnimatePresence>
+
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </>
   );
 }
