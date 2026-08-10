@@ -118,10 +118,10 @@ export default function ContactModal({ open, onClose }: Props) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 16 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="fixed inset-0 z-[61] flex items-center justify-center p-4 pointer-events-none"
+            className="fixed inset-0 z-[61] flex items-end lg:items-center justify-center lg:p-4 pointer-events-none"
           >
             <div
-              className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-sm shadow-2xl shadow-black/60 pointer-events-auto flex flex-col lg:flex-row"
+              className="relative w-full max-w-4xl h-[92dvh] lg:h-auto lg:max-h-[90vh] overflow-hidden rounded-t-xl lg:rounded-sm shadow-2xl shadow-black/60 pointer-events-auto flex flex-col lg:flex-row"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close button */}
@@ -132,8 +132,8 @@ export default function ContactModal({ open, onClose }: Props) {
                 <X size={18} />
               </button>
 
-              {/* Left panel — contact info */}
-              <div className="bg-charcoal px-7 py-8 lg:w-[280px] shrink-0 flex flex-col gap-6 border-b lg:border-b-0 lg:border-r border-gray-700/40">
+              {/* Left panel — contact info (hidden on mobile, shown on desktop) */}
+              <div className="hidden lg:flex bg-charcoal px-7 py-8 lg:w-[280px] shrink-0 flex-col gap-6 lg:border-r border-gray-700/40">
                 <div>
                   <div className="h-[2px] w-8 bg-red mb-3" />
                   <h2 className="text-xl font-black text-off-white leading-tight">
@@ -183,7 +183,24 @@ export default function ContactModal({ open, onClose }: Props) {
               </div>
 
               {/* Right panel — form */}
-              <div className="bg-[#1e1e1e] flex-1 overflow-y-auto px-7 py-8">
+              <div className="bg-[#1e1e1e] flex-1 overflow-y-auto px-6 py-6 lg:px-7 lg:py-8">
+                {/* Mobile-only compact header */}
+                <div className="lg:hidden mb-5 pb-5 border-b border-gray-700/40">
+                  <div className="h-[2px] w-6 bg-red mb-2" />
+                  <h2 className="text-lg font-black text-off-white">
+                    Kontakt &amp; <span className="text-red">Anfrage</span>
+                  </h2>
+                  <div className="flex items-center gap-4 mt-3">
+                    <a href="tel:+4915901425683" className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-red transition-colors">
+                      <Phone size={12} className="text-red" />
+                      +49 1590 1425683
+                    </a>
+                    <a href="mailto:info@oliabbruch.de" className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-red transition-colors">
+                      <Mail size={12} className="text-red" />
+                      info@oliabbruch.de
+                    </a>
+                  </div>
+                </div>
                 {status === "success" ? (
                   <div className="h-full min-h-[300px] flex flex-col items-center justify-center text-center gap-5">
                     <div className="w-14 h-14 bg-green-500/10 rounded-full flex items-center justify-center">
