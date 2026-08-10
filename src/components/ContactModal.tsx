@@ -24,6 +24,21 @@ export default function ContactModal({ open, onClose }: Props) {
     }
   };
 
+  const validateField = (name: string, value: string) => {
+    let error: string | undefined;
+    if (name === "name" && !value.trim()) error = "Name ist erforderlich.";
+    if (name === "email") {
+      if (!value.trim()) error = "E-Mail ist erforderlich.";
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) error = "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
+    }
+    if (name === "message" && !value.trim()) error = "Nachricht ist erforderlich.";
+    setFieldErrors((prev) => ({ ...prev, [name]: error }));
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    validateField(e.target.name, e.target.value);
+  };
+
   const validate = (): boolean => {
     const errors: FieldErrors = {};
     if (!form.name.trim()) errors.name = "Name ist erforderlich.";
@@ -199,6 +214,7 @@ export default function ContactModal({ open, onClose }: Props) {
                           value={form.name}
                           onChange={handleChange}
                           placeholder="Max Mustermann"
+                          onBlur={handleBlur}
                           className={inputClass("name")}
                         />
                         {fieldErrors.name && (
@@ -235,6 +251,7 @@ export default function ContactModal({ open, onClose }: Props) {
                         value={form.email}
                         onChange={handleChange}
                         placeholder="ihre@email.de"
+                        onBlur={handleBlur}
                         className={inputClass("email")}
                       />
                       {fieldErrors.email && (
@@ -255,6 +272,7 @@ export default function ContactModal({ open, onClose }: Props) {
                         value={form.message}
                         onChange={handleChange}
                         placeholder="Beschreiben Sie Ihr Projekt — Art der Arbeit, Umfang, gewünschter Zeitraum..."
+                        onBlur={handleBlur}
                         className={`${inputClass("message")} resize-none`}
                       />
                       {fieldErrors.message && (
