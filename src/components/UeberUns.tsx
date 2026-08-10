@@ -109,20 +109,24 @@ export default function UeberUns() {
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-red to-transparent opacity-60" />
 
         <div className="max-w-7xl mx-auto px-6 py-16 flex items-center justify-center">
-          <motion.p
-            initial={{ opacity: 0, letterSpacing: "0.04em" }}
-            whileInView={{ opacity: 1, letterSpacing: "0.12em" }}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-off-white text-center uppercase"
-            style={{ letterSpacing: "0.12em" }}
+            className="flex flex-col sm:flex-row items-center gap-3 sm:gap-0"
           >
-            Schnell
-            <span className="text-red mx-4 sm:mx-6 font-light">—</span>
-            Sauber
-            <span className="text-red mx-4 sm:mx-6 font-light">—</span>
-            Zuverlässig
-          </motion.p>
+            {["Schnell", "Sauber", "Zuverlässig"].map((word, i) => (
+              <div key={word} className="flex flex-col sm:flex-row items-center">
+                {i > 0 && (
+                  <span className="text-red font-light text-2xl sm:text-4xl lg:text-5xl sm:mx-5 lg:mx-6 my-1 sm:my-0">—</span>
+                )}
+                <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-off-white uppercase tracking-[0.1em]">
+                  {word}
+                </span>
+              </div>
+            ))}
+          </motion.div>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-red to-transparent opacity-40" />
