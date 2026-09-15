@@ -75,7 +75,7 @@ export default function Navbar() {
                 className="h-[48px] w-auto"
                 priority
               />
-              <span className="hidden sm:block text-off-white font-black text-xl tracking-tight">
+              <span className="text-off-white font-black text-base sm:text-xl tracking-tight">
                 OLI <span className="text-red">ABBRUCH</span>
               </span>
             </Link>
