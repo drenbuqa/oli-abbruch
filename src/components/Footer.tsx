@@ -33,7 +33,7 @@ export default function Footer() {
                 alt="Oli Abbruch & Entkernung"
                 width={160}
                 height={64}
-                className="h-[60px] w-auto rounded-sm"
+                className="h-[60px] w-auto"
               />
             </div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4">

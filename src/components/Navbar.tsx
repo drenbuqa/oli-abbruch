@@ -72,7 +72,7 @@ export default function Navbar() {
                 alt="Oli Abbruch & Entkernung"
                 width={130}
                 height={52}
-                className="h-[48px] w-auto rounded-sm"
+                className="h-[48px] w-auto"
                 priority
               />
             </Link>
@@ -220,7 +220,7 @@ export default function Navbar() {
                     alt="Oli Abbruch & Entkernung"
                     width={110}
                     height={44}
-                    className="h-[40px] w-auto rounded-sm"
+                    className="h-[40px] w-auto"
                   />
                 </Link>
                 <button
