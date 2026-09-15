@@ -27,13 +27,13 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="mb-4 inline-block bg-white rounded px-3 py-1.5 shadow-sm shadow-black/30">
+            <div className="mb-4">
               <Image
                 src="/images/logo.png"
                 alt="Oli Abbruch & Entkernung"
                 width={160}
                 height={64}
-                className="h-[52px] w-auto block"
+                className="h-[60px] w-auto"
               />
             </div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4">
