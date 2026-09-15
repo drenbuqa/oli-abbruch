@@ -66,13 +66,13 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-[72px]">
             {/* Logo */}
-            <Link href="/" className="shrink-0">
+            <Link href="/" className="shrink-0 bg-white rounded px-2 py-1 shadow-sm shadow-black/30">
               <Image
                 src="/images/logo.png"
                 alt="Oli Abbruch & Entkernung"
                 width={130}
                 height={52}
-                className="h-[48px] w-auto"
+                className="h-[40px] w-auto block"
                 priority
               />
             </Link>
@@ -214,13 +214,13 @@ export default function Navbar() {
             >
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-700/40">
-                <Link href="/" onClick={() => setMobileOpen(false)}>
+                <Link href="/" onClick={() => setMobileOpen(false)} className="bg-white rounded px-2 py-1 shadow-sm shadow-black/30">
                   <Image
                     src="/images/logo.png"
                     alt="Oli Abbruch & Entkernung"
                     width={110}
                     height={44}
-                    className="h-[40px] w-auto"
+                    className="h-[36px] w-auto block"
                   />
                 </Link>
                 <button
