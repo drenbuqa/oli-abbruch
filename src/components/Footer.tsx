@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 
 const services = [
@@ -26,10 +27,14 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-0.5 mb-4">
-              <span className="text-2xl font-black tracking-tight text-off-white">OLI</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-red mx-1 mt-0.5" />
-              <span className="text-2xl font-black tracking-tight text-red">ABBRUCH</span>
+            <div className="mb-4">
+              <Image
+                src="/images/logo.png"
+                alt="Oli Abbruch & Entkernung"
+                width={160}
+                height={64}
+                className="h-[60px] w-auto rounded-sm"
+              />
             </div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4">
               Schnell — Sauber — Zuverlässig

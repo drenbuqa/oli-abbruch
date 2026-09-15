@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, X, Menu, ChevronDown, ArrowRight, MessageSquare } from "lucide-react";
+import Image from "next/image";
 import { services } from "@/lib/services";
 import ContactModal from "@/components/ContactModal";
 
@@ -65,10 +66,15 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-[72px]">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-1.5 shrink-0">
-              <span className="text-off-white font-black text-xl tracking-tight">OLI</span>
-              <span className="text-red font-black text-xl">•</span>
-              <span className="text-off-white font-black text-xl tracking-tight">ABBRUCH</span>
+            <Link href="/" className="shrink-0">
+              <Image
+                src="/images/logo.png"
+                alt="Oli Abbruch & Entkernung"
+                width={130}
+                height={52}
+                className="h-[48px] w-auto rounded-sm"
+                priority
+              />
             </Link>
 
             {/* Desktop nav */}
@@ -208,10 +214,14 @@ export default function Navbar() {
             >
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-700/40">
-                <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-1.5">
-                  <span className="text-off-white font-black text-lg">OLI</span>
-                  <span className="text-red font-black text-lg">•</span>
-                  <span className="text-off-white font-black text-lg">ABBRUCH</span>
+                <Link href="/" onClick={() => setMobileOpen(false)}>
+                  <Image
+                    src="/images/logo.png"
+                    alt="Oli Abbruch & Entkernung"
+                    width={110}
+                    height={44}
+                    className="h-[40px] w-auto rounded-sm"
+                  />
                 </Link>
                 <button
                   onClick={() => setMobileOpen(false)}
