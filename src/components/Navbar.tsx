@@ -75,10 +75,9 @@ export default function Navbar() {
                 className="h-[48px] w-auto"
                 priority
               />
-              <div className="hidden sm:flex flex-col leading-tight">
-                <span className="text-off-white font-black text-base tracking-tight">OLI</span>
-                <span className="text-red font-bold text-[11px] uppercase tracking-[0.12em]">Abbruch & Entkernung</span>
-              </div>
+              <span className="hidden sm:block text-off-white font-black text-xl tracking-tight">
+                OLI <span className="text-red">ABBRUCH</span>
+              </span>
             </Link>
 
             {/* Desktop nav */}
