@@ -12,6 +12,10 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
   title: "Oli Abbruch & Entkernung | Schnell – Sauber – Zuverlässig",
   description:
     "Professionelle Abbruch- und Entkerungsarbeiten in Baden-Württemberg. Schadstoffentkernung, Altbausanierung, Beton bohren & sägen. Zuverlässig, schnell und sauber.",

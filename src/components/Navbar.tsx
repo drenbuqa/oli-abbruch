@@ -66,7 +66,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-[72px]">
             {/* Logo */}
-            <Link href="/" className="shrink-0">
+            <Link href="/" className="shrink-0 flex items-center gap-3">
               <Image
                 src="/images/logo.png"
                 alt="Oli Abbruch & Entkernung"
@@ -75,6 +75,10 @@ export default function Navbar() {
                 className="h-[48px] w-auto"
                 priority
               />
+              <div className="hidden sm:flex flex-col leading-tight">
+                <span className="text-off-white font-black text-base tracking-tight">OLI</span>
+                <span className="text-red font-bold text-[11px] uppercase tracking-[0.12em]">Abbruch & Entkernung</span>
+              </div>
             </Link>
 
             {/* Desktop nav */}
